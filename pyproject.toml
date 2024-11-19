@@ -1,0 +1,21 @@
+[project]
+name = "apod-wallpaper"
+version = "0.0.1"
+description = "Set the Astronomy Picture of the Day as your wallpaper on Linux"
+authors = [{name = "painerp", email = "8081128+painerp@users.noreply.github.com"}]
+requires-python = ">=3.11"
+dependencies = [
+    "psutil>=6.1.0",
+    "Pillow>=11.0.0",
+    "questionary>=2.0.1",
+    "requests>=2.32.3",
+    "pydbus>=0.6.0",
+]
+
+[project.scripts]
+apod-wallpaper = "apod_wallpaper:aw"
+apod-wallpaper-switcher = "apod_wallpaper:aws"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
